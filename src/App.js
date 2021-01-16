@@ -9,6 +9,7 @@ import {
   NavLink,
   Switch,
 } from "react-router-dom";
+import MainRender from "./Components/MainRender/MainRender";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={LandingPage} />
-          <Route path="/categories" component={Categories} />
+          <Route path="/categories" exact component={Categories} />
+          <Route path="/categories/:url" component={MainRender}></Route>
         </Switch>
       </Router>
     </div>

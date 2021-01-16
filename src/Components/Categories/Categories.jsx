@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import categories from "./config";
+import categories from "../../config";
 
 const Categories = () => {
   return (
@@ -10,7 +10,7 @@ const Categories = () => {
         <Card key={el.id} style={{ width: "18rem" }}>
           <Card.Body>
             <Card.Title>{el.title}</Card.Title>
-            <Link to={el.url}>Choose</Link>
+            <Link to={`/categories/${el.url}`}>Choose</Link>
           </Card.Body>
         </Card>
       ))}
