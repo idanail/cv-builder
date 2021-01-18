@@ -3,3 +3,8 @@
   display: flex;
   justify-content: space-around;
 }
+
+.active {
+  color: indigo;
+  font-weight: bold;
+}

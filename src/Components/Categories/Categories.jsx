@@ -10,7 +10,7 @@ const Categories = () => {
         <Card key={el.id} style={{ width: "18rem" }}>
           <Card.Body>
             <Card.Title>{el.title}</Card.Title>
-            <Link to={`/categories/${el.url}`}>Choose</Link>
+            <Link to={`/categories/${el.url}/cv`}>Choose</Link>
           </Card.Body>
         </Card>
       ))}
