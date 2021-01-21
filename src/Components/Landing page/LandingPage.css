@@ -1,0 +1,18 @@
+.LandingPage .btn-violet {
+  color: white;
+  background-color: #6f42c1;
+  border: 1px solid #6f42c1;
+  border-radius: 3px;
+  font-size: 0.65rem;
+}
+
+.LandingPage .btn-violet:hover {
+  color: #6f42c1;
+  background-color: transparent;
+}
+
+.LandingPage {
+  height: 100vh;
+  background: url("../../assets/img/backgrounds/background.svg") center/cover
+    no-repeat;
+}
