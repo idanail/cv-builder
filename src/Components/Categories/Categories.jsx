@@ -25,7 +25,7 @@ const Categories = () => {
                 <Card.Title className="my-5 text-center">{el.title}</Card.Title>
                 <div className="text-right">
                   <Link
-                    to={el.url}
+                    to={`/categories/${el.url}/cv`}
                     className="btn btn-violet px-3 py-2 text-uppercase font-weight-bold"
                   >
                     Choose
