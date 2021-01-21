@@ -13,6 +13,18 @@
 
 .LandingPage {
   height: 100vh;
-  background: url("../../assets/img/backgrounds/background.svg") center/cover
-    no-repeat;
+  /* background: url("../../assets/img/backgrounds/background.svg") center/cover
+    no-repeat; */
+}
+
+.LandingPage .col-md-8 {
+  margin-top: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+  .LandingPage .col-md-8 {
+    margin-top: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }

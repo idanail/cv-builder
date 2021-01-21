@@ -1,0 +1,24 @@
+.Footer a {
+  color: #6f42c1;
+}
+
+.Footer a:hover {
+  color: #6f42c1;
+}
+
+/* .Footer {
+  position: fixed;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+} */
+
+.Footer .col {
+  margin-top: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Footer .col {
+    margin-top: 50px;
+  }
+}
