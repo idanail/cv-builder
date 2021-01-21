@@ -4,10 +4,11 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 import "./LandingPage.css";
 import backgroundImage from "../../assets/img/backgrounds/BackgroundFirstPage.png";
 import Footer from "../Footer/Footer";
+import "../../App.css";
 
 const LandingPage = () => {
   return (
-    <div className="LandingPage row d-flex align-items-center">
+    <div className="LandingPage row main-bg d-flex align-items-center">
       <div className="col-md-8 offset-md-2">
         <div className="row">
           <div className="col-md-6 d-flex flex-column justify-content-center">

@@ -1,4 +1,5 @@
-.main-bg {
+.App {
+  height: 100vh;
   background: url("./assets/img/backgrounds/background.svg") center/cover
     no-repeat;
 }
