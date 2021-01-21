@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import categories from "./config";
+import categories from "../../config.js";
 import "../../App.css";
 import "./Categories.css";
 

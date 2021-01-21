@@ -9,6 +9,8 @@ import {
   NavLink,
   Switch,
 } from "react-router-dom";
+import MainRender from "./Components/MainRender/MainRender";
+import CV from "./Components/MainRender/CV";
 
 function App() {
   return (
@@ -16,7 +18,8 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={LandingPage} />
-          <Route path="/categories" component={Categories} />
+          <Route path="/categories" exact component={Categories} />
+          <Route path="/categories/:url" component={MainRender} />
         </Switch>
       </Router>
     </div>
