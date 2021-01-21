@@ -102,12 +102,7 @@ class MainRender extends Component {
           </div>
           <div className="col-md-4">
             <div className="row mt-5 mr-5 mb-5 border">
-              <div className="col">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                repellendus eum officiis, fugit molestiae, optio aspernatur
-                alias assumenda nisi ipsum porro neque. Fugit dolorum voluptatem
-                odit, labore sit maiores dolore a aut iste ipsum.
-              </div>
+              <div className="col"></div>
             </div>
           </div>
         </div>
