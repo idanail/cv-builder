@@ -57,12 +57,13 @@ class MainRender extends Component {
       <div className="MainRender container-fluid">
         <div className="row">
           <div className="col-md-8">
-            <div className="row m-5 border">
+            <div className="row m-5 pt-4 box-shadow">
               <div className="col-md-10">
                 <ul>
                   <li>
                     <NavLink
                       activeClassName="active"
+                      className="btn btn-violet text-uppercase"
                       to={`/categories/${currentCategory}/cv`}
                     >
                       CV
@@ -71,6 +72,7 @@ class MainRender extends Component {
                   <li>
                     <NavLink
                       activeClassName="active"
+                      className="btn btn-violet text-uppercase"
                       to={`/categories/${currentCategory}/linkedin`}
                     >
                       LinkedIn
@@ -79,6 +81,7 @@ class MainRender extends Component {
                   <li>
                     <NavLink
                       activeClassName="active"
+                      className="btn btn-violet text-uppercase"
                       to={`/categories/${currentCategory}/wearelaika`}
                     >
                       Wearelaika.com
@@ -86,23 +89,27 @@ class MainRender extends Component {
                   </li>
                 </ul>
               </div>
-              <div className="col-md-2">
-                {/* {editButton} */}
+              <div className="col-md-2 text-center">
                 {this.props.location.pathname ===
                   `/categories/${currentCategory}/cv` && (
-                  <NavLink to="">Edit</NavLink>
+                  <NavLink to="/asd" className="btn btn-edit text-uppercase">
+                    Edit
+                  </NavLink>
                 )}
               </div>
-              <div className="col-md-12">
-                {currentComponent}
-                {/* Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla,
-                perferendis! */}
-              </div>
+              <div className="col-md-12">{currentComponent}</div>
             </div>
           </div>
           <div className="col-md-4">
-            <div className="row mt-5 mr-5 mb-5 border">
-              <div className="col"></div>
+            <div className="row mt-5 mr-5 mb-5 box-shadow">
+              <div className="col">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi
+                quos quis unde nam, expedita et id quia quas laborum ut,
+                voluptatibus laboriosam similique! Culpa reprehenderit facere
+                alias similique hic modi, libero totam impedit sit debitis
+                excepturi ullam necessitatibus amet aliquid non sunt dolorum!
+                Esse libero quae expedita dolore deleniti aliquid?
+              </div>
             </div>
           </div>
         </div>
