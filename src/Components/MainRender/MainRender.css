@@ -1,7 +1,11 @@
-.App ul {
+.MainRender .main-ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+.MainRender .main-ul li:not(:last-child) {
+  margin-right: 20px;
 }
 
 .active {

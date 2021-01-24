@@ -1,0 +1,29 @@
+.web-dev-image {
+  border: 2px solid #17a2b8;
+}
+
+.job-desc-ul {
+  list-style-type: square;
+}
+
+.job-desc-ul li::before {
+  color: #17a2b8 !important;
+}
+
+.skill {
+  line-height: 2.5;
+  border-radius: 4px;
+  white-space: nowrap;
+  color: white;
+}
+
+.WebDevelopment .contact-info {
+  list-style-type: none;
+  text-align: right;
+}
+
+.WebDevelopment .contact-info li {
+  margin-bottom: 7px;
+  text-align: right;
+  white-space: nowrap;
+}
