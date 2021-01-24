@@ -1,16 +1,8 @@
-import logo from "./logo.svg";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-import LandingPage from "./Components/Landing page/LandingPage";
 import Categories from "./Components/Categories/Categories";
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  NavLink,
-  Switch,
-} from "react-router-dom";
+import LandingPage from "./Components/Landing page/LandingPage";
 import MainRender from "./Components/MainRender/MainRender";
-import CV from "./Components/MainRender/CV";
 
 function App() {
   return (
