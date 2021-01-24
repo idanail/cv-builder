@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import WebDevelopment from "../WebDevelopment/WebDevelopment";
 import CV from "./CV";
 import LinkedIn from "./LinkedIn";
 import "./MainRender.css";
@@ -19,7 +20,7 @@ class MainRender extends Component {
       case `/categories/${currentCategory}/cv`:
         switch (currentCategory) {
           case "web-development":
-            currentComponent = <p>CV - Web development</p>;
+            currentComponent = <WebDevelopment />;
             break;
 
           case "data-science":
@@ -59,7 +60,7 @@ class MainRender extends Component {
           <div className="col-md-8">
             <div className="row m-5 pt-4 box-shadow">
               <div className="col-md-10">
-                <ul>
+                <ul className="main-ul">
                   <li>
                     <NavLink
                       activeClassName="active"

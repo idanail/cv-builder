@@ -1,7 +1,11 @@
-.App ul {
+.MainRender .main-ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+.MainRender .main-ul li:not(:last-child) {
+  margin-right: 20px;
 }
 
 .active {
@@ -46,4 +50,8 @@
 .MainRender .btn-edit:hover {
   color: #6f42c1;
   background-color: rgb(241, 240, 240);
+}
+
+.tips-page {
+  margin-bottom: 100px;
 }
