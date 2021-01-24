@@ -98,11 +98,11 @@ class MainRender extends Component {
                   </NavLink>
                 )}
               </div>
-              <div className="col-md-12">{currentComponent}</div>
+              <div className="col-md-12 mt-4">{currentComponent}</div>
             </div>
           </div>
           <div className="col-md-4">
-            <div className="row mt-5 mr-5 mb-5 box-shadow">
+            <div className="row mt-5 mr-5 mb-5 box-shadow position-relative tips-page position-fixed">
               <div className="col">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi
                 quos quis unde nam, expedita et id quia quas laborum ut,
