@@ -15,24 +15,24 @@ const Categories = () => {
           </div>
         </div>
         <div className="row">
-          {categories.map((el) => (
-            <Card
-              key={el.id}
-              className="col category-card"
-              style={{ width: "14rem" }}
-            >
-              <Card.Body>
-                <Card.Title className="my-5 text-center">{el.title}</Card.Title>
-                <div className="text-right">
-                  <Link
-                    to={el.url}
-                    className="btn btn-violet px-3 py-2 text-uppercase font-weight-bold"
-                  >
-                    Choose
-                  </Link>
-                </div>
-              </Card.Body>
-            </Card>
+          {categories.map((el, idx) => (
+            <div key={idx} className="col-12 col-sm-6 col-md-3">
+              <Card key={el.id} className="category-card px-0">
+                <Card.Body className="d-flex flex-column justify-content-end">
+                  <Card.Title className="my-5 text-center">
+                    {el.title}
+                  </Card.Title>
+                  <div className="text-right">
+                    <Link
+                      to={el.url}
+                      className="btn btn-violet px-3 py-2 text-uppercase font-weight-bold"
+                    >
+                      Choose
+                    </Link>
+                  </div>
+                </Card.Body>
+              </Card>
+            </div>
           ))}
         </div>
       </div>
