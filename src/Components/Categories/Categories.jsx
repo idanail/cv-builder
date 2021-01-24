@@ -18,7 +18,7 @@ const Categories = () => {
           {categories.map((el) => (
             <Card
               key={el.id}
-              className="category-card"
+              className="col category-card"
               style={{ width: "14rem" }}
             >
               <Card.Body>
