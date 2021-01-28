@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import WebDevelopment from "../WebDevelopment/WebDevelopment";
 import CV from "./CV";
 import LinkedIn from "./LinkedIn";
@@ -9,8 +9,16 @@ import WeAreLaika from "./WeAreLaika";
 class MainRender extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      isInEditMode: false,
+    };
   }
+
+  handleEditMode = () => {
+    this.setState({
+      isInEditMode: !this.state.isInEditMode,
+    });
+  };
 
   render() {
     const currentCategory = this.props.match.params.url;
@@ -20,7 +28,9 @@ class MainRender extends Component {
       case `/categories/${currentCategory}/cv`:
         switch (currentCategory) {
           case "web-development":
-            currentComponent = <WebDevelopment />;
+            currentComponent = (
+              <WebDevelopment editMode={this.state.isInEditMode} />
+            );
             break;
 
           case "data-science":
@@ -93,16 +103,20 @@ class MainRender extends Component {
               <div className="col-md-2 text-center">
                 {this.props.location.pathname ===
                   `/categories/${currentCategory}/cv` && (
-                  <NavLink to="/asd" className="btn btn-edit text-uppercase">
+                  <Link
+                    to="#"
+                    onClick={this.handleEditMode}
+                    className="btn btn-edit text-uppercase"
+                  >
                     Edit
-                  </NavLink>
+                  </Link>
                 )}
               </div>
-              <div className="col-md-12 mt-4">{currentComponent}</div>
+              <div className="col-md-12">{currentComponent}</div>
             </div>
           </div>
           <div className="col-md-4">
-            <div className="row mt-5 mr-5 mb-5 box-shadow position-relative tips-page position-fixed">
+            <div className="row mt-5 mr-5 mb-5 box-shadow">
               <div className="col">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi
                 quos quis unde nam, expedita et id quia quas laborum ut,
