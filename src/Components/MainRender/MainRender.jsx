@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import WebDevelopment from "../WebDevelopment/WebDevelopment";
 import CV from "./CV";
 import LinkedIn from "./LinkedIn";
@@ -9,8 +9,16 @@ import WeAreLaika from "./WeAreLaika";
 class MainRender extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      isInEditMode: false,
+    };
   }
+
+  handleEditMode = () => {
+    this.setState({
+      isInEditMode: !this.state.isInEditMode,
+    });
+  };
 
   render() {
     const currentCategory = this.props.match.params.url;
@@ -20,7 +28,9 @@ class MainRender extends Component {
       case `/categories/${currentCategory}/cv`:
         switch (currentCategory) {
           case "web-development":
-            currentComponent = <WebDevelopment />;
+            currentComponent = (
+              <WebDevelopment editMode={this.state.isInEditMode} />
+            );
             break;
 
           case "data-science":
@@ -93,9 +103,13 @@ class MainRender extends Component {
               <div className="col-md-2 text-center">
                 {this.props.location.pathname ===
                   `/categories/${currentCategory}/cv` && (
-                  <NavLink to="/asd" className="btn btn-edit text-uppercase">
+                  <Link
+                    to="#"
+                    onClick={this.handleEditMode}
+                    className="btn btn-edit text-uppercase"
+                  >
                     Edit
-                  </NavLink>
+                  </Link>
                 )}
               </div>
               <div className="col-md-12">{currentComponent}</div>

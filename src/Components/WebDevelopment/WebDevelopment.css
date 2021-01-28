@@ -27,3 +27,75 @@
   text-align: right;
   white-space: nowrap;
 }
+
+/* Edit Mode */
+
+textarea {
+  width: 100%;
+  border: 0;
+  resize: none !important;
+}
+
+input {
+  width: 100%;
+  border: 0;
+  resize: none !important;
+}
+
+#full-name {
+  font-size: 30px !important;
+  height: 40px;
+}
+
+#basic-info {
+  font-size: 1rem !important;
+  color: #17a2b8 !important;
+  min-height: 44px;
+}
+
+#goals {
+  font-size: 1rem !important;
+  min-height: 104px;
+}
+
+.contact-info input {
+  text-align: right;
+}
+
+#position-title {
+  font-size: 1rem !important;
+  font-weight: bold;
+  height: 25px;
+}
+
+#company-workplace {
+  font-size: 1rem !important;
+  height: 25px;
+}
+
+.start-month {
+  width: 20px;
+  color: #17a2b8 !important;
+}
+.start-year {
+  width: 40px;
+  color: #17a2b8 !important;
+}
+
+.city-country {
+  text-align: right;
+}
+
+.edit-job-desc-ul {
+  list-style-type: square;
+}
+
+.edit-job-desc-ul li {
+  color: #17a2b8 !important;
+}
+
+.skill {
+  width: fit-content;
+  background-color: #17a2b8;
+  color: white !important;
+}
