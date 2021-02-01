@@ -1,6 +1,5 @@
 import { Carousel } from "react-bootstrap";
 import React, { Component } from "react";
-import bill1 from "./img/LinkedIn screenshots/bill1.png";
 import linkedInImages from "../../assets/js/linkedin.js";
 import "./LinkedIn.css";
 

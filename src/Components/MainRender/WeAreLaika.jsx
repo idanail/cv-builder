@@ -1,19 +1,23 @@
-import React, { Component } from "react";
-import laika1 from "./img/Laika screenshots/Laika1.png";
+import React from "react";
+import weAreLaikaImages from "../../assets/js/wearelaika.js";
+import { Carousel } from "react-bootstrap";
 
-class WeAreLaika extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <div className="WeAreLaika">
-        <img src={laika1} alt="WeAreLaika" className="w-100 d-block" />
-      </div>
-    );
-  }
-}
+const WeAreLaika = () => {
+  return (
+    <div className="WeAreLaika">
+      <Carousel>
+        {weAreLaikaImages.map((el, index) => (
+          <Carousel.Item key={index}>
+            <img
+              className="d-block w-100"
+              src={el.image.default}
+              alt="WeAreLaika screenshot"
+            />
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </div>
+  );
+};
 
 export default WeAreLaika;
