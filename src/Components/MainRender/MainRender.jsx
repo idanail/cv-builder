@@ -119,18 +119,20 @@ class MainRender extends Component {
                 )}
               </div>
               <div className="col-md-12">{currentComponent}</div>
-              <div className="col-md-12">
-                <div className="row">
-                  <div className="col-md-3 offset-md-9 pb-4 text-right">
-                    <Link
-                      to="#"
-                      className="btn btn-edit btn-download text-uppercase"
-                    >
-                      Download
-                    </Link>
+              {pathname === `/categories/${currentCategory}/cv` && (
+                <div className="col-md-12">
+                  <div className="row">
+                    <div className="col-md-3 offset-md-9 pb-4 text-right">
+                      <Link
+                        to="#"
+                        className="btn btn-edit btn-download text-uppercase"
+                      >
+                        Download
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
           <div className="col-md-4">
