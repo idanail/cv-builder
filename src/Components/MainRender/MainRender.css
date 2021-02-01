@@ -52,6 +52,18 @@
   background-color: rgb(241, 240, 240);
 }
 
-.tips-page {
-  height: 85vh;
+.tips-page-cv {
+  position: fixed;
+  height: calc(100vh - 96px);
+  margin-top: 48px;
+}
+
+.tips-page-rest {
+  position: fixed;
+  height: calc(100vh - 186px);
+  margin-top: 135px;
+}
+
+.MainRender .btn-download {
+  padding: 10px 40px;
 }
