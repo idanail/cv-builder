@@ -1,5 +1,8 @@
+import { Carousel } from "react-bootstrap";
 import React, { Component } from "react";
 import bill1 from "./img/LinkedIn screenshots/bill1.png";
+import linkedInImages from "../../assets/js/linkedin.js";
+import "./LinkedIn.css";
 
 class LinkedIn extends Component {
   constructor() {
@@ -10,7 +13,26 @@ class LinkedIn extends Component {
   render() {
     return (
       <div className="LinkedIn">
-        <img src={bill1} alt="LinkedIn" className="w-100 d-block" />
+        <Carousel>
+          {linkedInImages.map((el, index) => (
+            <Carousel.Item key={index}>
+              <img
+                className="d-block w-100"
+                src={el.image.default}
+                alt="LinkedIn"
+              />
+            </Carousel.Item>
+          ))}
+          {/* <Carousel.Item>
+            <img className="d-block w-100" src={bill1} alt="LinkedIn" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src={bill1} alt="LinkedIn" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src={bill1} alt="LinkedIn" />
+          </Carousel.Item> */}
+        </Carousel>
       </div>
     );
   }
