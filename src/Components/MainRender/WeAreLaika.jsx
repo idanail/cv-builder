@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import laika1 from "./img/Laika screenshots/Laika1.png";
+// import laika1 from "./img/Laika screenshots/Laika1.png";
 
 class WeAreLaika extends Component {
   constructor() {
@@ -10,7 +10,7 @@ class WeAreLaika extends Component {
   render() {
     return (
       <div className="WeAreLaika">
-        <img src={laika1} alt="WeAreLaika" className="w-100 d-block" />
+        {/* <img src={laika1} alt="WeAreLaika" className="w-100 d-block" /> */}
       </div>
     );
   }
