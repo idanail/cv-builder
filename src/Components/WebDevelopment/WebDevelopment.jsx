@@ -166,11 +166,6 @@ class WebDevelopment extends Component {
                 ></textarea>
               </div>
               <div className="col-md-2 mt-3 px-0 mt-md-0">
-                {/* <img
-                  src={data.CV.image.default}
-                  className="d-block w-100 rounded-circle web-dev-image"
-                  alt={data.CV.basicInfo.name}
-                /> */}
                 <label htmlFor="attach-image">
                   <img
                     onClick={this.fileUploadAction}

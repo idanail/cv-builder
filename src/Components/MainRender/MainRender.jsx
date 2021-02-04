@@ -22,9 +22,10 @@ class MainRender extends Component {
 
   render() {
     const currentCategory = this.props.match.params.url;
+    const { pathname } = this.props.location;
     let currentComponent;
 
-    switch (this.props.location.pathname) {
+    switch (pathname) {
       case `/categories/${currentCategory}/cv`:
         switch (currentCategory) {
           case "web-development":
@@ -66,9 +67,15 @@ class MainRender extends Component {
 
     return (
       <div className="MainRender container-fluid">
-        <div className="row">
+        <div className="row position-relative">
           <div className="col-md-8">
-            <div className="row m-5 pt-4 box-shadow">
+            <div
+              className={
+                pathname === `/categories/${currentCategory}/cv`
+                  ? "row m-5 pt-4 box-shadow"
+                  : "row m-5 pt-4"
+              }
+            >
               <div className="col-md-10">
                 <ul className="main-ul">
                   <li>
@@ -100,9 +107,9 @@ class MainRender extends Component {
                   </li>
                 </ul>
               </div>
-              <div className="col-md-2 text-center">
-                {this.props.location.pathname ===
-                  `/categories/${currentCategory}/cv` && (
+
+              <div className="col-md-2 text-right">
+                {pathname === `/categories/${currentCategory}/cv` && (
                   <Link
                     to="#"
                     onClick={this.handleEditMode}
@@ -113,10 +120,30 @@ class MainRender extends Component {
                 )}
               </div>
               <div className="col-md-12">{currentComponent}</div>
+              {pathname === `/categories/${currentCategory}/cv` && (
+                <div className="col-md-12">
+                  <div className="row">
+                    <div className="col-md-3 offset-md-9 pb-4 text-right">
+                      <Link
+                        to="#"
+                        className="btn btn-edit btn-download text-uppercase"
+                      >
+                        Download
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
           <div className="col-md-4">
-            <div className="row mt-5 mr-5 mb-5 box-shadow">
+            <div
+              className={
+                pathname === `/categories/${currentCategory}/cv`
+                  ? "row mr-5 box-shadow tips-page-cv"
+                  : "row mr-5 box-shadow tips-page-rest"
+              }
+            >
               <div className="col">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi
                 quos quis unde nam, expedita et id quia quas laborum ut,

@@ -14,7 +14,7 @@ import CV from "./Components/MainRender/CV";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container-fluid">
       <Router>
         <Switch>
           <Route path="/" exact component={LandingPage} />
