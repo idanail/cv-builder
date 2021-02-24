@@ -1,0 +1,35 @@
+.wearelaika-links {
+  height: 50%;
+}
+
+.wearelaika-what-for {
+  top: 70%;
+  height: 15%;
+}
+
+.wearelaika-industry {
+  height: 50%;
+}
+
+.wearelaika-experience {
+  top: 55%;
+  height: 40%;
+}
+
+.wearelaika-experience-2 {
+  height: 33%;
+}
+
+.wearelaika-salary {
+  top: 35%;
+  height: 37%;
+}
+
+.wearelaika-job-type {
+  top: 75%;
+  height: 22%;
+}
+
+.carousel-indicators {
+  z-index: 1 !important;
+}

@@ -1,0 +1,56 @@
+.present {
+  width: auto !important;
+  margin-left: -15px !important;
+}
+
+.WorkExperience ul li input {
+  background-color: unset;
+}
+
+.task-delete-button .CustomButton {
+  position: absolute;
+  right: 50%;
+}
+
+.position-title {
+  font-size: 1rem !important;
+  font-weight: bold;
+}
+
+#company-workplace {
+  font-size: 1rem !important;
+  overflow: hidden;
+}
+
+.start-end-month {
+  width: 20px;
+  color: #2cbbad !important;
+}
+
+.start-end-month-data-science {
+  width: 20px;
+}
+
+.start-end-year {
+  width: 40px;
+  color: #2cbbad !important;
+}
+
+.WorkExperienceTask span {
+  margin-left: 10px;
+  width: 100%;
+}
+
+.job-desc-ul {
+  list-style-type: square;
+}
+
+.job-desc-ul li::before {
+  color: #2cbbad !important;
+}
+
+.edit-job-desc-ul-web-dev li::before {
+  color: #2cbbad !important;
+  content: "■";
+  vertical-align: top;
+}

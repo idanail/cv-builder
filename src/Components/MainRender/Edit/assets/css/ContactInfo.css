@@ -1,0 +1,11 @@
+.ContactInfo ul li input {
+  background-color: unset;
+}
+
+.contactInfo-textarea-dm textarea {
+  color: white !important;
+}
+
+.contactInfo-textarea-dm textarea::placeholder {
+  color: white !important;
+}
