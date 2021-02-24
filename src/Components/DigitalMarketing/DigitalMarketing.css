@@ -1,0 +1,57 @@
+.digital-marketing-ul {
+  list-style-type: circle;
+}
+
+.educationDescription-list {
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+  list-style-position: inside;
+}
+
+.DigitalMarketingRender .job-desc-ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.DigitalMarketingRender .job-desc-ul li::before {
+  display: inline-block;
+  color: #17a2b8 !important;
+  content: "o";
+  width: 1.25em;
+  margin-left: -2em;
+}
+
+.DigitalMarketingRender .job-desc-ul li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.edit-job-desc-ul-digital-marketing li::before {
+  color: #17a2b8;
+  content: "o";
+  vertical-align: top;
+}
+
+#basic-info-digital-marketing {
+  font-size: 1rem;
+  color: #17a2b8;
+}
+
+.start-end-month-digital-marketing {
+  width: 20px;
+  color: #17a2b8;
+}
+
+.start-end-year-digital-marketing {
+  width: 40px;
+  color: #17a2b8;
+}
+
+.city-country-digital-marketing {
+  color: #17a2b8;
+}
+
+.skills-edit-digital-marketing div input {
+  color: white;
+  background-color: #17a2b8;
+}
