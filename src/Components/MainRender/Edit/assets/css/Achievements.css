@@ -1,0 +1,8 @@
+.Achievements .achievement-edit {
+  font-size: 1rem;
+}
+
+.Achievements .achievement-edit-desc,
+.Languages .language-edit-desc {
+  font-style: italic;
+}

@@ -1,0 +1,19 @@
+.LanguageRender .level-wrapper span {
+  font-weight: bold;
+}
+
+.LanguageRender .level-wrapper {
+  height: 17px;
+}
+
+.LanguageRender .level-wrapper span:not(:last-child) {
+  margin-right: 10px;
+}
+
+.LanguageRender .level-wrapper span:hover {
+  cursor: pointer;
+}
+
+.language-edit-desc {
+  height: 17px;
+}

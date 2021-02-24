@@ -1,83 +1,92 @@
-import React, { Component } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { Button, Col, Modal, Row } from "react-bootstrap";
+import { Link, NavLink, Redirect } from "react-router-dom";
+import { DataContext } from "../../context/CvContext";
+import Banner from "../Banner/Banner";
+import DataScience from "../DataScience/DataScience";
+import Design from "../Design/Design";
+import DigitalMarketing from "../DigitalMarketing/DigitalMarketing";
 import WebDevelopment from "../WebDevelopment/WebDevelopment";
-import CV from "./CV";
 import LinkedIn from "./LinkedIn";
 import "./MainRender.css";
 import WeAreLaika from "./WeAreLaika";
 
-class MainRender extends Component {
-  constructor() {
-    super();
-    this.state = {
-      isInEditMode: false,
-    };
+const MainRender = (props) => {
+  const {
+    editMode,
+    handleEditMode,
+    getRoute,
+    displayTips,
+    isLinkedInChecked,
+    isWeAreLaikaChecked,
+    handleDownload,
+    modal,
+    handleClose,
+  } = useContext(DataContext);
+
+  const currentCategory = props.match.params.url;
+  const { pathname } = props.location;
+  const ref = React.createRef();
+
+  let currentComponent;
+
+  useEffect(() => getRoute(currentCategory), [currentCategory]);
+
+  let element = document.getElementById("current-component");
+
+  switch (pathname) {
+    case `/categories/${currentCategory}/cv`:
+      switch (currentCategory) {
+        case "web-development":
+          currentComponent = <WebDevelopment />;
+          break;
+
+        case "data-science":
+          currentComponent = <DataScience />;
+          break;
+
+        case "digital-marketing":
+          currentComponent = <DigitalMarketing />;
+          break;
+
+        case "design":
+          currentComponent = <Design />;
+          break;
+
+        default:
+          currentComponent = <Redirect to="/notfound" />;
+          break;
+      }
+
+      break;
+
+    case `/categories/${currentCategory}/linkedin`:
+      currentComponent = <LinkedIn />;
+      break;
+
+    case `/categories/${currentCategory}/wearelaika`:
+      currentComponent = <WeAreLaika />;
+      break;
+
+    default:
+      currentComponent = <Redirect to="/notfound" />;
+      break;
   }
 
-  handleEditMode = () => {
-    this.setState({
-      isInEditMode: !this.state.isInEditMode,
-    });
-  };
-
-  render() {
-    const currentCategory = this.props.match.params.url;
-    const { pathname } = this.props.location;
-    let currentComponent;
-
-    switch (pathname) {
-      case `/categories/${currentCategory}/cv`:
-        switch (currentCategory) {
-          case "web-development":
-            currentComponent = (
-              <WebDevelopment editMode={this.state.isInEditMode} />
-            );
-            break;
-
-          case "data-science":
-            currentComponent = <p>CV - Data Science</p>;
-            break;
-
-          case "digital-marketing":
-            currentComponent = <p>CV - Digital Marketing</p>;
-            break;
-
-          case "design":
-            currentComponent = <p>CV - Design</p>;
-            break;
-
-          default:
-            break;
-        }
-
-        break;
-
-      case `/categories/${currentCategory}/linkedin`:
-        currentComponent = <LinkedIn />;
-        break;
-
-      case `/categories/${currentCategory}/wearelaika`:
-        currentComponent = <WeAreLaika />;
-        break;
-
-      default:
-        currentComponent = <CV />;
-        break;
-    }
-
-    return (
-      <div className="MainRender container-fluid">
-        <div className="row position-relative">
-          <div className="col-md-8">
-            <div
+  return (
+    <Row className="MainRender" ref={ref}>
+      <Col className="mb-5">
+        <Row className="position-relative">
+          <Col md="8" className="border">
+            <Row
               className={
                 pathname === `/categories/${currentCategory}/cv`
-                  ? "row m-5 pt-4 box-shadow"
-                  : "row m-5 pt-4"
+                  ? "m-md-5 pt-4 box-shadow bg-white"
+                  : "m-md-5 pt-4"
               }
             >
-              <div className="col-md-10">
-                <ul className="main-ul">
+              <Col md="10">
+                <ul className="main-ul text-center text-md-left">
                   <li>
                     <NavLink
                       activeClassName="active"
@@ -106,57 +115,111 @@ class MainRender extends Component {
                     </NavLink>
                   </li>
                 </ul>
-              </div>
-              <div className="col-md-2 text-right">
+              </Col>
+              <Col
+                md="2"
+                className="d-none d-md-block text-center text-md-right"
+              >
                 {pathname === `/categories/${currentCategory}/cv` && (
                   <Link
                     to="#"
-                    onClick={this.handleEditMode}
+                    onClick={handleEditMode}
                     className="btn btn-edit text-uppercase"
                   >
                     Edit
                   </Link>
                 )}
-              </div>
-              <div className="col-md-12">{currentComponent}</div>
+              </Col>
+              <Col md="12" id="current-component">
+                {currentComponent}
+              </Col>
               {pathname === `/categories/${currentCategory}/cv` && (
-                <div className="col-md-12">
-                  <div className="row">
-                    <div className="col-md-3 offset-md-9 pb-4 text-right">
-                      <Link
-                        to="#"
-                        className="btn btn-edit btn-download text-uppercase"
+                <Col className={`pb-5 pb-md-0 ${!editMode && "mb-4"}`}>
+                  <Row>
+                    <Col
+                      xs={editMode ? "4" : "12"}
+                      className="d-flex d-md-none justify-content-center align-items-center"
+                    >
+                      {pathname === `/categories/${currentCategory}/cv` && (
+                        <Link
+                          to="#"
+                          onClick={() => {
+                            window.scrollTo(0, 0);
+                            handleEditMode();
+                          }}
+                          className="btn btn-edit text-uppercase"
+                        >
+                          Edit
+                        </Link>
+                      )}
+                    </Col>
+                    {editMode && (
+                      <Col
+                        xs="7"
+                        md={{ span: 3, offset: 9 }}
+                        className="pb-3 d-flex justify-content-center align-items-center"
                       >
-                        Download
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+                        <Link
+                          to={
+                            isLinkedInChecked && isWeAreLaikaChecked
+                              ? "/popup"
+                              : "#"
+                          }
+                          onClick={() => handleDownload(element)}
+                          className="btn btn-edit btn-download text-uppercase mt-3"
+                          data-toggle="modal"
+                          data-target="#downloadModal"
+                        >
+                          Download
+                        </Link>
+                      </Col>
+                    )}
+                  </Row>
+                </Col>
               )}
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div
+            </Row>
+          </Col>
+          <Col md="4">
+            <Row
               className={
                 pathname === `/categories/${currentCategory}/cv`
-                  ? "row mr-5 box-shadow tips-page-cv"
-                  : "row mr-5 box-shadow tips-page-rest"
+                  ? "mr-5 box-shadow tips-page-cv"
+                  : "mr-5 box-shadow tips-page-rest"
               }
             >
-              <div className="col">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi
-                quos quis unde nam, expedita et id quia quas laborum ut,
-                voluptatibus laboriosam similique! Culpa reprehenderit facere
-                alias similique hic modi, libero totam impedit sit debitis
-                excepturi ullam necessitatibus amet aliquid non sunt dolorum!
-                Esse libero quae expedita dolore deleniti aliquid?
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
+              <Col className="tips-font p-5 bg-white">
+                {displayTips
+                  ? displayTips
+                  : "Here's where you get comments on each section of the CV, e.g. you click on the photo and it gives you tips on how it should look like."}
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Modal show={modal} onHide={handleClose}>
+              <Modal.Header closeButton>
+                <Modal.Title>Alert</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                {!isLinkedInChecked && !isWeAreLaikaChecked
+                  ? "Please check the LinkedIn and WeAreLaika sections before downloading the CV."
+                  : !isLinkedInChecked
+                  ? "Please check the LinkedIn section before downloading the CV."
+                  : "Please check the WeAreLaika section before downloading the CV."}
+              </Modal.Body>
+              <Modal.Footer>
+                <Button className="btn text-uppercase" onClick={handleClose}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          </Col>
+        </Row>
+        <Banner />
+      </Col>
+    </Row>
+  );
+};
 
 export default MainRender;

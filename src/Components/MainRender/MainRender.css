@@ -14,7 +14,7 @@
 }
 
 .box-shadow {
-  -webkit-box-shadow: 0px 3px 13px -5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 3px 13px -5px rgba(39, 32, 32, 0.75);
   -moz-box-shadow: 0px 3px 13px -5px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 3px 13px -5px rgba(0, 0, 0, 0.75);
 }
@@ -31,12 +31,14 @@
   box-shadow: 0px 3px 9px -6px rgba(0, 0, 0, 0.75);
 }
 
-.MainRender .btn-violet:hover {
+.MainRender .btn-violet:hover,
+.modal-footer button {
   color: white;
   background-color: #6f42c1;
 }
 
-.MainRender .btn-edit {
+.MainRender .btn-edit,
+.modal-footer button {
   color: white;
   background-color: #6f42c1;
   padding-top: 10px;
@@ -54,16 +56,42 @@
 
 .tips-page-cv {
   position: fixed;
-  height: calc(100vh - 96px);
+  height: calc(100vh - 144px);
   margin-top: 48px;
 }
 
 .tips-page-rest {
   position: fixed;
-  height: calc(100vh - 186px);
+  height: calc(100vh - 231px);
   margin-top: 135px;
 }
 
 .MainRender .btn-download {
   padding: 10px 40px;
+}
+
+.tips-font {
+  color: #979da1;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.modal-footer button {
+  border-color: #6f42c1;
+}
+
+@media only screen and (max-width: 600px) {
+  .MainRender .main-ul {
+    display: block;
+    padding-left: 0;
+  }
+
+  .MainRender .main-ul li {
+    margin-right: 0;
+  }
+
+  .MainRender .main-ul li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }

@@ -1,0 +1,37 @@
+.Popup {
+  background-color: white;
+}
+
+.Popup .bg-wrapper {
+  height: 90vh;
+}
+
+.bg-popup {
+  background: url("../../assets/img/backgrounds/Backgroundpop-up.png")
+    center/cover;
+}
+
+.Popup .col-md-3 {
+  margin-top: 100px;
+  margin-left: 60px;
+}
+
+.Popup .h1 {
+  font-weight: bold !important;
+}
+
+.Popup .h4 {
+  margin-top: 80px;
+  font-weight: bold;
+}
+
+.Popup .h4 a,
+.Popup .h4 a:hover {
+  color: palevioletred;
+}
+
+@media only screen and (max-width: 600px) {
+  .Popup .col-md-3 {
+    margin: 20px 0;
+  }
+}
