@@ -1,0 +1,17 @@
+.Education ul li input {
+  background-color: unset;
+}
+
+.Education textarea {
+  overflow: hidden;
+}
+
+#university {
+  font-size: 1rem !important;
+  overflow: hidden;
+}
+
+.EducationCourse span {
+  margin-left: 10px;
+  width: 100%;
+}

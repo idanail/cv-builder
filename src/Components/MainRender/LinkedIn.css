@@ -5,14 +5,18 @@
 
 .carousel-control-prev-icon:after {
   content: "\01F844";
-  color: purple !important;
+  color: #6f42c1 !important;
   font-size: 3rem;
 }
 
 .carousel-control-next-icon:after {
   content: "\01F846";
-  color: purple !important;
+  color: #6f42c1 !important;
   font-size: 3rem;
+}
+
+.carousel-indicators {
+  z-index: 1 !important;
 }
 
 .carousel-indicators li {
@@ -50,4 +54,29 @@
 .carousel,
 .item {
   overflow: hidden !important;
+}
+
+.linkedin-experience {
+  height: 47%;
+}
+
+.linkedin-education {
+  top: 50%;
+  height: 45%;
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel-inner {
+    height: 60vh !important;
+  }
+
+  .carousel-item {
+    padding: 0px;
+    width: 100%;
+  }
+
+  .carousel-item img {
+    width: 100% !important;
+    margin: 0 !important;
+  }
 }
