@@ -1,0 +1,102 @@
+.border-black-top {
+  border-top: 2px solid black;
+}
+.border-black-right {
+  border-right: 2px solid black;
+}
+.border-black-bottom {
+  border-bottom: 2px solid black;
+}
+.border-black-left {
+  border-left: 2px solid black;
+}
+
+.bg-black {
+  background-color: black !important;
+}
+
+.letter-spacing {
+  letter-spacing: 10px !important;
+}
+
+.font-16 {
+  font-size: 16px !important;
+}
+
+#full-name-design {
+  font-size: 1.75rem !important;
+  text-transform: uppercase;
+  height: 40px;
+  color: white;
+  letter-spacing: 10px;
+  font-weight: bold;
+}
+
+#basic-info-design {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.about-design {
+  color: white !important;
+  font-size: 0.5rem;
+}
+
+.DesignRender .h6,
+.DesignEdit .h6 {
+  letter-spacing: -1px;
+}
+
+.design-contact-info {
+  list-style-type: none !important;
+}
+
+.start-end-month-design {
+  width: 23px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.start-end-year-design {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.w-42 {
+  width: 42px;
+}
+
+.w-38 {
+  width: 38px;
+}
+
+.text-black {
+  color: #212529;
+}
+
+.month-year-separator {
+  font-size: 1rem;
+}
+
+.company-workplace-design {
+  font-weight: bold;
+}
+
+.position-title-design {
+  font-size: 1rem !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .border-black-left-mobile {
+    border-left: 2px solid black;
+  }
+
+  .border-black-top-mobile {
+    border-top: unset;
+  }
+
+  .border-black-top {
+    border-top: unset;
+  }
+}
