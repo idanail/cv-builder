@@ -1,19 +1,8 @@
 .web-dev-image {
-  border: 2px solid #17a2b8;
+  border: 2px solid #2cbbad;
 }
 
-.job-desc-ul {
-  list-style-type: square;
-}
-
-.job-desc-ul li::before {
-  color: #17a2b8 !important;
-}
-
-.skill {
-  line-height: 2.5;
-  border-radius: 4px;
-  white-space: nowrap;
+.WebDevelopment .skill {
   color: white;
 }
 
@@ -26,4 +15,68 @@
   margin-bottom: 7px;
   text-align: right;
   white-space: nowrap;
+}
+
+.WebDevelopment .list-square {
+  width: 25px;
+  margin-top: 3px;
+}
+
+.text-green {
+  color: #2cbbad;
+}
+
+.bg-green {
+  background-color: #2cbbad;
+}
+
+/* Edit Mode */
+
+textarea {
+  width: 100%;
+  border: 0;
+  resize: none !important;
+  background-color: unset;
+}
+
+input {
+  width: 100%;
+  border: 0;
+  resize: none !important;
+}
+
+.full-name-web-dev {
+  font-size: 30px !important;
+  height: 40px;
+  font-weight: 500;
+}
+
+#basic-info-web-dev {
+  font-size: 1rem !important;
+  font-weight: 500;
+  color: #2cbbad;
+}
+
+/* #goals {
+  font-size: 1rem !important;
+} */
+
+.WebDevelopment .contact-info input {
+  text-align: right;
+}
+
+.WebDevRender hr,
+.WebDevEdit hr {
+  background-color: #2cbbad !important;
+  padding: 1px 0;
+}
+
+.city-country {
+  color: #2cbbad;
+}
+
+@media only screen and (max-width: 600px) {
+  .WebDevRender img {
+    width: 50% !important;
+  }
 }
