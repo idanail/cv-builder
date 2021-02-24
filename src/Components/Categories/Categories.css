@@ -2,6 +2,10 @@
   height: 100vh;
 }
 
+.categories-wrapper {
+  margin-bottom: 80px;
+}
+
 .category-card:not(:last-child) {
   margin-right: 30px;
 }
