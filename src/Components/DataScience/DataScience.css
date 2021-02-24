@@ -1,0 +1,58 @@
+.data-science-contact {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.DataScienceRender .job-desc-ul {
+  list-style-type: none;
+  margin-left: 0;
+  /* padding-left: 1em; */
+}
+
+.DataScienceRender .job-desc-ul li::before {
+  display: inline-block;
+  content: "-";
+  width: 2em;
+  margin-left: -2em;
+}
+
+.DataScienceRender .job-desc-ul li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.dv-star-rating-empty-star div {
+  border: 1px solid #343a40 !important;
+}
+
+.dv-star-rating-full-star div {
+  border: 1px solid #343a40 !important;
+  background-color: #343a40;
+}
+
+.DataScience .skill {
+  color: #343a40;
+  border: 1px solid #b3b6b6 !important;
+}
+
+.DataScience .skill:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.SkillsDataScience textarea {
+  width: 40%;
+}
+
+#basic-info-data-science {
+  font-size: 1rem !important;
+  color: #6c757d !important;
+}
+
+.edit-job-desc-ul-data-science li::before {
+  color: black !important;
+  content: "-";
+  vertical-align: top;
+}
+
+.ContactInfoDataScience .row .contact-wrapper {
+  padding-left: 30px;
+}
