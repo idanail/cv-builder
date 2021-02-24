@@ -1,19 +1,8 @@
 .web-dev-image {
-  border: 2px solid #17a2b8;
+  border: 2px solid #2cbbad;
 }
 
-.job-desc-ul {
-  list-style-type: square;
-}
-
-.job-desc-ul li::before {
-  color: #17a2b8 !important;
-}
-
-.skill {
-  line-height: 2.5;
-  border-radius: 4px;
-  white-space: nowrap;
+.WebDevelopment .skill {
   color: white;
 }
 
@@ -28,12 +17,26 @@
   white-space: nowrap;
 }
 
+.WebDevelopment .list-square {
+  width: 25px;
+  margin-top: 3px;
+}
+
+.text-green {
+  color: #2cbbad;
+}
+
+.bg-green {
+  background-color: #2cbbad;
+}
+
 /* Edit Mode */
 
 textarea {
   width: 100%;
   border: 0;
   resize: none !important;
+  background-color: unset;
 }
 
 input {
@@ -42,60 +45,38 @@ input {
   resize: none !important;
 }
 
-#full-name {
+.full-name-web-dev {
   font-size: 30px !important;
   height: 40px;
+  font-weight: 500;
 }
 
-#basic-info {
+#basic-info-web-dev {
   font-size: 1rem !important;
-  color: #17a2b8 !important;
-  min-height: 44px;
+  font-weight: 500;
+  color: #2cbbad;
 }
 
-#goals {
+/* #goals {
   font-size: 1rem !important;
-  min-height: 104px;
-}
+} */
 
-.contact-info input {
+.WebDevelopment .contact-info input {
   text-align: right;
 }
 
-#position-title {
-  font-size: 1rem !important;
-  font-weight: bold;
-  height: 25px;
-}
-
-#company-workplace {
-  font-size: 1rem !important;
-  height: 25px;
-}
-
-.start-month {
-  width: 20px;
-  color: #17a2b8 !important;
-}
-.start-year {
-  width: 40px;
-  color: #17a2b8 !important;
+.WebDevRender hr,
+.WebDevEdit hr {
+  background-color: #2cbbad !important;
+  padding: 1px 0;
 }
 
 .city-country {
-  text-align: right;
+  color: #2cbbad;
 }
 
-.edit-job-desc-ul {
-  list-style-type: square;
-}
-
-.edit-job-desc-ul li {
-  color: #17a2b8 !important;
-}
-
-.skill {
-  width: fit-content;
-  background-color: #17a2b8;
-  color: white !important;
+@media only screen and (max-width: 600px) {
+  .WebDevRender img {
+    width: 50% !important;
+  }
 }
