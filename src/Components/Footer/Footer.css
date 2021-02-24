@@ -1,3 +1,9 @@
+.Footer {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
 .Footer a {
   color: #6f42c1;
 }
@@ -6,19 +12,7 @@
   color: #6f42c1;
 }
 
-/* .Footer {
-  position: fixed;
-  left: 50%;
-  bottom: 50px;
-  transform: translateX(-50%);
-} */
-
-.Footer .col {
-  margin-top: 100px;
-}
-
-@media only screen and (max-width: 768px) {
-  .Footer .col {
-    margin-top: 50px;
-  }
+.Footer span {
+  font-size: 0.9rem;
+  font-weight: 500;
 }
