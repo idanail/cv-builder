@@ -1,5 +1,28 @@
 .App {
-  height: 100vh;
-  background: url("./assets/img/backgrounds/background.svg") center/cover
-    no-repeat;
+  /* height: 100vh; */
+  background: url("./assets/img/backgrounds/background.svg") center/cover;
+}
+
+*:focus {
+  outline: none;
+}
+
+.bg-violet {
+  background-color: #6f42c1;
+}
+
+.bg-yellow {
+  background-color: #f0e130;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
