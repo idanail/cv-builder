@@ -1,3 +1,7 @@
+.LandingPage {
+  height: 100vh !important;
+}
+
 .LandingPage .btn-violet {
   color: white;
   background-color: #6f42c1;
@@ -11,8 +15,19 @@
   background-color: transparent;
 }
 
-.LandingPage {
-  height: 100vh;
-  background: url("../../assets/img/backgrounds/background.svg") center/cover
-    no-repeat;
+.LandingPage .landing-main {
+  height: 90vh;
+}
+
+.LandingPage p {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  .LandingPage .col-md-8 {
+    margin-top: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
