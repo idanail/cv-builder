@@ -36,10 +36,6 @@ const MainRender = (props) => {
 
   useEffect(() => getRoute(currentCategory), [currentCategory]);
 
-  // useEffect(() => {
-  //   data.workExperience[0].position && setWorkEntered(true);
-  // }, []);
-
   let element = document.getElementById("current-component");
 
   switch (pathname) {
