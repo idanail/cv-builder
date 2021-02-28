@@ -23,6 +23,10 @@ export const Provider = (props) => {
   const [isFocused, setFocused] = useState(false);
   const [isLinkedInChecked, setLinkedInChecked] = useState(false);
   const [isWeAreLaikaChecked, setWeAreLaikaChecked] = useState(false);
+  const [isWorkEntered, setWorkEntered] = useState(false);
+  const [isEducationEntered, setEducationEntered] = useState(false);
+  const [isAchievementEntered, setAchievementEntered] = useState(false);
+  const [isLanguageEntered, setLanguageEntered] = useState(false);
   const [modal, setModal] = useState(false);
 
   // Basic Info
@@ -411,14 +415,27 @@ export const Provider = (props) => {
 
   // WeAreLaika
 
-  const handleWeAreLaika = (value) => {
-    setWeAreLaikaChecked(value);
-  };
+  const handleWeAreLaika = (value) => setWeAreLaikaChecked(value);
+
+  const handleWorkEntered = (value) => setWorkEntered(value);
+
+  const handleEducationEntered = (value) => setEducationEntered(value);
+
+  const handleAchievementEntered = (value) => setAchievementEntered(value);
+
+  const handleLanguageEntered = (value) => setLanguageEntered(value);
 
   // Download
 
   const handleDownload = (el) => {
-    if (isLinkedInChecked && isWeAreLaikaChecked) {
+    if (
+      isLinkedInChecked &&
+      isWeAreLaikaChecked &&
+      isWorkEntered &&
+      isEducationEntered &&
+      isAchievementEntered &&
+      isLanguageEntered
+    ) {
       window.scrollTo(0, 0);
       let opt = {
         margin: [12, 0, 0, 0],
@@ -432,10 +449,6 @@ export const Provider = (props) => {
       setModal(true);
     }
   };
-
-  // const handleShow = () => {
-  //   setModal(true);
-  // };
 
   const handleClose = () => {
     setModal(false);
@@ -492,6 +505,14 @@ export const Provider = (props) => {
     handleLinkedIn,
     isWeAreLaikaChecked,
     handleWeAreLaika,
+    isWorkEntered,
+    handleWorkEntered,
+    isEducationEntered,
+    handleEducationEntered,
+    isAchievementEntered,
+    handleAchievementEntered,
+    isLanguageEntered,
+    handleLanguageEntered,
     handleDownload,
     modal,
     handleClose,

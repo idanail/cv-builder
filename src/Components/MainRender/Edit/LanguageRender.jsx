@@ -7,6 +7,7 @@ const LanguageRender = ({ el }) => {
   const {
     removeLanguage,
     editLanguage,
+    handleLanguageEntered,
     handleFocus,
     languageLevelHandler,
     route,
@@ -19,11 +20,14 @@ const LanguageRender = ({ el }) => {
       <div>
         <input
           type="text"
-          name="language languages"
+          name="language"
           className="language-edit"
           value={el.language}
           placeholder={el.language ? el.language : "Language"}
-          onChange={(e) => editLanguage(e, el.id, e.target.name)}
+          onChange={(e) => {
+            editLanguage(e, el.id, e.target.name);
+            handleLanguageEntered(e.target.value ? true : false);
+          }}
           onFocus={() => {
             setLangFocused(true);
             handleFocus(true);

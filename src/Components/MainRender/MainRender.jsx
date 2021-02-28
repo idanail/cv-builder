@@ -19,6 +19,10 @@ const MainRender = (props) => {
     displayTips,
     isLinkedInChecked,
     isWeAreLaikaChecked,
+    isWorkEntered,
+    isEducationEntered,
+    isAchievementEntered,
+    isLanguageEntered,
     handleDownload,
     modal,
     handleClose,
@@ -199,14 +203,71 @@ const MainRender = (props) => {
           <Col>
             <Modal show={modal} onHide={handleClose}>
               <Modal.Header closeButton>
-                <Modal.Title>Alert</Modal.Title>
+                <Modal.Title>Before downloading the CV:</Modal.Title>
               </Modal.Header>
               <Modal.Body>
-                {!isLinkedInChecked && !isWeAreLaikaChecked
-                  ? "Please check the LinkedIn and WeAreLaika sections before downloading the CV."
-                  : !isLinkedInChecked
-                  ? "Please check the LinkedIn section before downloading the CV."
-                  : "Please check the WeAreLaika section before downloading the CV."}
+                <ul>
+                  {!isLinkedInChecked || !isWeAreLaikaChecked ? (
+                    <li>
+                      {!isLinkedInChecked && !isWeAreLaikaChecked
+                        ? "Please check the LinkedIn and WeAreLaika sections before downloading the CV."
+                        : !isLinkedInChecked
+                        ? "Please check the LinkedIn section before downloading the CV."
+                        : !isWeAreLaikaChecked
+                        ? "Please check the WeAreLaika section before downloading the CV."
+                        : ""}
+                    </li>
+                  ) : (
+                    ""
+                  )}
+                  {!isWorkEntered ||
+                  !isEducationEntered ||
+                  !isAchievementEntered ||
+                  !isLanguageEntered ? (
+                    <li>
+                      {!isWorkEntered &&
+                      !isEducationEntered &&
+                      !isAchievementEntered &&
+                      !isLanguageEntered
+                        ? "Please enter at least one Work Experience, one Education, one Achievement and one Langauge."
+                        : !isWorkEntered &&
+                          !isEducationEntered &&
+                          !isAchievementEntered
+                        ? "Please enter at least one Work Experience, one Education and one Achievement."
+                        : !isWorkEntered &&
+                          !isEducationEntered &&
+                          !isLanguageEntered
+                        ? "Please enter at least one Work Experience, one Education and one Language."
+                        : !isEducationEntered &&
+                          !isAchievementEntered &&
+                          !isLanguageEntered
+                        ? "Please enter at least one Education, one Achievement and one Langauge."
+                        : !isWorkEntered && !isEducationEntered
+                        ? "Please enter at least one Work Experience and one Education."
+                        : !isWorkEntered && !isAchievementEntered
+                        ? "Please enter at least one Work Experience and one Achievement."
+                        : !isWorkEntered && !isLanguageEntered
+                        ? "Please enter at least one Work Experience and one Language."
+                        : !isEducationEntered && !isAchievementEntered
+                        ? "Please enter at least one Education and one Achievement"
+                        : !isEducationEntered && !isLanguageEntered
+                        ? "Please enter at least one Education and one Language"
+                        : !isAchievementEntered && !isLanguageEntered
+                        ? "Please enter at least one Achievement and one Language"
+                        : !isWorkEntered
+                        ? "Please enter at least one Work Experience."
+                        : !isEducationEntered
+                        ? "Please enter at least one Education."
+                        : !isAchievementEntered
+                        ? "Please enter at least one Achievement."
+                        : !isLanguageEntered
+                        ? "Please enter at least one Language."
+                        : ""}
+                    </li>
+                  ) : (
+                    ""
+                  )}
+                </ul>
               </Modal.Body>
               <Modal.Footer>
                 <Button className="btn text-uppercase" onClick={handleClose}>
