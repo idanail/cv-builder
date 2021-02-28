@@ -4,7 +4,12 @@ import { DataContext } from "../../../context/CvContext";
 import CustomButton from "./CustomButton";
 
 const AchievementRender = ({ el }) => {
-  const { removeAchievement, editAchievement, route } = useContext(DataContext);
+  const {
+    removeAchievement,
+    editAchievement,
+    handleAchievementEntered,
+    route,
+  } = useContext(DataContext);
   const [isFocused, setFocused] = useState(false);
 
   return (
@@ -16,7 +21,10 @@ const AchievementRender = ({ el }) => {
           className="achievement-edit"
           value={el.achievement}
           placeholder="Achievement"
-          onChange={(e) => editAchievement(e, el.id, e.target.name)}
+          onChange={(e) => {
+            editAchievement(e, el.id, e.target.name);
+            handleAchievementEntered(e.target.value ? true : false);
+          }}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
         />

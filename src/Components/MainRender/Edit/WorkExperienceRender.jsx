@@ -11,11 +11,11 @@ const WorkExperienceRender = ({ el }) => {
   const {
     removeWorkExperience,
     editWorkExperience,
+    handleWorkEntered,
     addTask,
     handleTips,
     route,
   } = useContext(DataContext);
-  // const  useState(false);
   const [isFocused, setFocused] = useState(false);
 
   return (
@@ -41,7 +41,10 @@ const WorkExperienceRender = ({ el }) => {
               : "position-title"
           }`}
           value={el.position}
-          onChange={(e) => editWorkExperience(e, el.id, e.target.name)}
+          onChange={(e) => {
+            editWorkExperience(e, el.id, e.target.name);
+            handleWorkEntered(e.target.value ? true : false);
+          }}
           onClick={(e) => handleTips(e.target.name)}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}

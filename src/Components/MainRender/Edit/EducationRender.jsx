@@ -10,11 +10,12 @@ const EducationRender = ({ el }) => {
   const {
     removeEducation,
     editEducation,
+    handleEducationEntered,
     addCourse,
     handleTips,
     route,
   } = useContext(DataContext);
-  // const [setShowPresent] = useState(false);
+
   const [isFocused, setFocused] = useState(false);
 
   return (
@@ -39,7 +40,10 @@ const EducationRender = ({ el }) => {
               : "position-title"
           }`}
           value={el.degree}
-          onChange={(e) => editEducation(e, el.id, e.target.name)}
+          onChange={(e) => {
+            editEducation(e, el.id, e.target.name);
+            handleEducationEntered(e.target.value ? true : false);
+          }}
           onClick={(e) => handleTips(e.target.name)}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
@@ -180,7 +184,6 @@ const EducationRender = ({ el }) => {
                     placeholder="0000"
                     onChange={(e) => editEducation(e, el.id, e.target.name)}
                     onClick={(e) => handleTips(e.target.name)}
-                    // onFocus={() => setShowPresent(true)}
                   />
                 </>
               )}
@@ -197,7 +200,6 @@ const EducationRender = ({ el }) => {
               name="present"
               className="form-check-input present"
               onChange={(e) => editEducation(e, el.id, e.target.name)}
-              // onBlur={() => setShowPresent(false)}
               data-html2canvas-ignore
             />
             <label
