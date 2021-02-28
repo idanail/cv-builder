@@ -77,7 +77,7 @@ const MainRender = (props) => {
     <Row className="MainRender" ref={ref}>
       <Col className="mb-5">
         <Row className="position-relative">
-          <Col md="8" className="border">
+          <Col md="8">
             <Row
               className={
                 pathname === `/categories/${currentCategory}/cv`
@@ -134,7 +134,7 @@ const MainRender = (props) => {
                 {currentComponent}
               </Col>
               {pathname === `/categories/${currentCategory}/cv` && (
-                <Col className={`pb-5 pb-md-0 ${!editMode && "mb-4"}`}>
+                <Col className={`pt-4 pb-5 pb-md-0 ${!editMode && "mb-4"}`}>
                   <Row>
                     <Col
                       xs={editMode ? "4" : "12"}

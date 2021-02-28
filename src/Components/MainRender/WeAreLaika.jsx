@@ -17,7 +17,7 @@ const WeAreLaika = () => {
 
   return (
     <div className="WeAreLaika">
-      <Carousel>
+      <Carousel interval={null}>
         <Carousel.Item>
           <Image
             className="d-block w-75 mx-auto"
