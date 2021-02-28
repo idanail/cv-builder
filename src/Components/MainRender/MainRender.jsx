@@ -36,6 +36,10 @@ const MainRender = (props) => {
 
   useEffect(() => getRoute(currentCategory), [currentCategory]);
 
+  // useEffect(() => {
+  //   data.workExperience[0].position && setWorkEntered(true);
+  // }, []);
+
   let element = document.getElementById("current-component");
 
   switch (pathname) {
@@ -165,7 +169,12 @@ const MainRender = (props) => {
                       >
                         <Link
                           to={
-                            isLinkedInChecked && isWeAreLaikaChecked
+                            isLinkedInChecked &&
+                            isWeAreLaikaChecked &&
+                            isWorkEntered &&
+                            isEducationEntered &&
+                            isAchievementEntered &&
+                            isLanguageEntered
                               ? "/popup"
                               : "#"
                           }
