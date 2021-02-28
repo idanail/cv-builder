@@ -417,6 +417,8 @@ export const Provider = (props) => {
 
   const handleWeAreLaika = (value) => setWeAreLaikaChecked(value);
 
+  // 4 required fields
+
   const handleWorkEntered = (value) => setWorkEntered(value);
 
   const handleEducationEntered = (value) => setEducationEntered(value);

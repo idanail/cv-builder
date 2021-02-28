@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { DataContext } from "../../context/CvContext";
 import About from "../MainRender/Edit/About";
 import Name from "../MainRender/Edit/Name";
 import WorkExperience from "../MainRender/Edit/WorkExperience";
@@ -8,6 +9,15 @@ import Skills from "../MainRender/Edit/Skills";
 import { Col, Row } from "react-bootstrap";
 
 const DesignEdit = () => {
+  const { handleLanguageEntered, handleAchievementEntered } = useContext(
+    DataContext
+  );
+
+  useEffect(() => {
+    handleLanguageEntered(true);
+    handleAchievementEntered(true);
+  });
+
   return (
     <Col md="10" className="DesignEdit">
       <Row>

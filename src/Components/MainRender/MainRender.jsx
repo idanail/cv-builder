@@ -215,11 +215,11 @@ const MainRender = (props) => {
                   {!isLinkedInChecked || !isWeAreLaikaChecked ? (
                     <li>
                       {!isLinkedInChecked && !isWeAreLaikaChecked
-                        ? "Please check the LinkedIn and WeAreLaika sections before downloading the CV."
+                        ? "Please check the LinkedIn and WeAreLaika sections."
                         : !isLinkedInChecked
-                        ? "Please check the LinkedIn section before downloading the CV."
+                        ? "Please check the LinkedIn section."
                         : !isWeAreLaikaChecked
-                        ? "Please check the WeAreLaika section before downloading the CV."
+                        ? "Please check the WeAreLaika section."
                         : ""}
                     </li>
                   ) : (
@@ -234,39 +234,39 @@ const MainRender = (props) => {
                       !isEducationEntered &&
                       !isAchievementEntered &&
                       !isLanguageEntered
-                        ? "Please enter at least one Work Experience, one Education, one Achievement and one Langauge."
+                        ? "Please enter at least one work experience, one education, one achievement and one language."
                         : !isWorkEntered &&
                           !isEducationEntered &&
                           !isAchievementEntered
-                        ? "Please enter at least one Work Experience, one Education and one Achievement."
+                        ? "Please enter at least one work experience, one education and one achievement."
                         : !isWorkEntered &&
                           !isEducationEntered &&
                           !isLanguageEntered
-                        ? "Please enter at least one Work Experience, one Education and one Language."
+                        ? "Please enter at least one work experience, one education and one language."
                         : !isEducationEntered &&
                           !isAchievementEntered &&
                           !isLanguageEntered
-                        ? "Please enter at least one Education, one Achievement and one Langauge."
+                        ? "Please enter at least one education, one achievement and one language."
                         : !isWorkEntered && !isEducationEntered
-                        ? "Please enter at least one Work Experience and one Education."
+                        ? "Please enter at least one work experience and one education."
                         : !isWorkEntered && !isAchievementEntered
-                        ? "Please enter at least one Work Experience and one Achievement."
+                        ? "Please enter at least one work experience and one achievement."
                         : !isWorkEntered && !isLanguageEntered
-                        ? "Please enter at least one Work Experience and one Language."
+                        ? "Please enter at least one work experience and one language."
                         : !isEducationEntered && !isAchievementEntered
-                        ? "Please enter at least one Education and one Achievement"
+                        ? "Please enter at least one education and one achievement"
                         : !isEducationEntered && !isLanguageEntered
-                        ? "Please enter at least one Education and one Language"
+                        ? "Please enter at least one education and one language"
                         : !isAchievementEntered && !isLanguageEntered
-                        ? "Please enter at least one Achievement and one Language"
+                        ? "Please enter at least one achievement and one language"
                         : !isWorkEntered
-                        ? "Please enter at least one Work Experience."
+                        ? "Please enter at least one work experience."
                         : !isEducationEntered
-                        ? "Please enter at least one Education."
+                        ? "Please enter at least one education."
                         : !isAchievementEntered
-                        ? "Please enter at least one Achievement."
+                        ? "Please enter at least one achievement."
                         : !isLanguageEntered
-                        ? "Please enter at least one Language."
+                        ? "Please enter at least one language."
                         : ""}
                     </li>
                   ) : (
