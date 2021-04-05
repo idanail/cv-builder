@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ce073687.chunk.css",
+    "main.js": "/static/js/main.aa9348f3.chunk.js",
+    "main.js.map": "/static/js/main.aa9348f3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.729a0917.js",
+    "runtime-main.js.map": "/static/js/runtime-main.729a0917.js.map",
+    "static/css/2.ef9168ec.chunk.css": "/static/css/2.ef9168ec.chunk.css",
+    "static/js/2.ebfa211f.chunk.js": "/static/js/2.ebfa211f.chunk.js",
+    "static/js/2.ebfa211f.chunk.js.map": "/static/js/2.ebfa211f.chunk.js.map",
+    "static/js/3.2b17e431.chunk.js": "/static/js/3.2b17e431.chunk.js",
+    "static/js/3.2b17e431.chunk.js.map": "/static/js/3.2b17e431.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.ef9168ec.chunk.css.map": "/static/css/2.ef9168ec.chunk.css.map",
+    "static/css/main.ce073687.chunk.css.map": "/static/css/main.ce073687.chunk.css.map",
+    "static/js/2.ebfa211f.chunk.js.LICENSE.txt": "/static/js/2.ebfa211f.chunk.js.LICENSE.txt",
+    "static/media/BackgroundFirstPage.58fa4ebd.png": "/static/media/BackgroundFirstPage.58fa4ebd.png",
+    "static/media/Popup.css": "/static/media/Backgroundpop-up.753a966e.png",
+    "static/media/addimg.a8b24ef9.png": "/static/media/addimg.a8b24ef9.png",
+    "static/media/aleksandra.jpg": "/static/media/aleksandra.c7dc6e4a.jpg",
+    "static/media/bill1.f0070518.png": "/static/media/bill1.f0070518.png",
+    "static/media/bill2.a4a03517.png": "/static/media/bill2.a4a03517.png",
+    "static/media/bill3.137bb2b6.png": "/static/media/bill3.137bb2b6.png",
+    "static/media/bill4.9e0c3db5.png": "/static/media/bill4.9e0c3db5.png",
+    "static/media/elon.jpg": "/static/media/elon.fbc10b94.jpg",
+    "static/media/laika1.a21f5444.png": "/static/media/laika1.a21f5444.png",
+    "static/media/laika2.fe30aa80.png": "/static/media/laika2.fe30aa80.png",
+    "static/media/laika3.68f734a2.png": "/static/media/laika3.68f734a2.png",
+    "static/media/laika4.4e3ad35f.png": "/static/media/laika4.4e3ad35f.png",
+    "static/media/laika5.227b9007.png": "/static/media/laika5.227b9007.png",
+    "static/media/stefanija.jpg": "/static/media/stefanija.52c5ae13.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.729a0917.js",
+    "static/css/2.ef9168ec.chunk.css",
+    "static/js/2.ebfa211f.chunk.js",
+    "static/css/main.ce073687.chunk.css",
+    "static/js/main.aa9348f3.chunk.js"
+  ]
+}
